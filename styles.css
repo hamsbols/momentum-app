@@ -4,9 +4,23 @@
   padding: 0;
 }
 
+/*BACKGROUND*/
+#bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/*DASHBOARD*/
 body {
   text-align: center;
-  font-family: "Shadows Into Light Two", cursive;
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
 }
 
 .main {
@@ -27,7 +41,7 @@ h1 {
 
 h2 {
   margin-bottom: 0;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .quote {
@@ -43,3 +57,5 @@ h2 {
   font-size: 1rem;
   margin: 15px 0;
 }
+
+/*TODO LIST*/
