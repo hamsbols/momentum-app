@@ -1,5 +1,11 @@
 //BACKGROUND
-var images = ["img/1.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg", "img/2.jpg"]; // Put your image names in this array
+var images = [
+  "images/1.jpg",
+  "images/3.jpg",
+  "images/4.jpg",
+  "images/5.jpg",
+  "images/2.jpg",
+];
 var currentIndex = 0;
 var bgImage = document.getElementById("bg-image");
 
@@ -107,6 +113,14 @@ axios.get("https://api.quotable.io/random").then((res) => {
   content.textContent = res.data.content;
   author.textContent = res.data.author;
 });
+function updateQuote() {
+  axios.get("https://api.quotable.io/random").then((res) => {
+    content.textContent = res.data.content;
+    author.textContent = res.data.author;
+  });
+}
+updateQuote();
+setInterval(updateQuote, 60000);
 
 showTime();
 setBg();
@@ -114,3 +128,43 @@ getName();
 getFocus();
 
 //TODO LIST
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
+
+function addTask() {
+  if (inputBox.value === "") {
+    alert("Write something");
+  } else {
+    let li = document.createElement("li");
+    li.innerHTML = inputBox.value;
+    listContainer.appendChild(li);
+    let span = document.createElement("span");
+    span.innerHTML = "\u00d7";
+    li.appendChild(span);
+  }
+  inputBox.value = "";
+  saveData();
+}
+
+listContainer.addEventListener(
+  "click",
+  function (e) {
+    if (e.target.tagName === "LI") {
+      e.target.classList.toggle("checked");
+      saveData();
+    } else if (e.target.tagName === "SPAN") {
+      e.target.parentElement.remove();
+      saveData();
+    }
+  },
+  false
+);
+
+function saveData() {
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showTask() {
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();
