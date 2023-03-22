@@ -65,18 +65,36 @@ h2 {
 }
 
 /*TODO LIST*/
+
 .todo-app {
   width: 100%;
   max-width: 400px;
   background: rgba(255, 255, 255, 0.5);
-  margin: 100px auto 20px;
+  margin: 0;
   padding: 20px;
   border-radius: 10px;
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
-  margin: 0;
   text-align: left;
+}
+
+.ShowHide {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #000000;
+  cursor: pointer;
+}
+
+#elementToWorkOn {
+  display: none;
 }
 
 .todo-app h2 {
@@ -114,7 +132,7 @@ button {
   border: none;
   outline: none;
   padding: 16px 50px;
-  background: #546a5a;
+  background: #575857;
   color: #fff;
   cursor: pointer;
   border-radius: 40px;
