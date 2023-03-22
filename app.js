@@ -18,7 +18,7 @@ function changeBackground() {
 }
 
 changeBackground();
-setInterval(changeBackground, 60000); // Change image every 1 minute
+setInterval(changeBackground, 60000);
 
 //DASHBOARD
 const time = document.getElementById("time"),
@@ -169,7 +169,7 @@ function showTask() {
 }
 showTask();
 
-const divContainer = document.querySelector("#elementToWorkOn");
+const divContainer = document.querySelector("#hideBtn");
 
 let isCLicked = true;
 

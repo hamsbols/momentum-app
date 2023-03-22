@@ -93,7 +93,7 @@ h2 {
   cursor: pointer;
 }
 
-#elementToWorkOn {
+#hideBtn {
   display: none;
 }
 
@@ -161,7 +161,7 @@ ul li::before {
 }
 
 ul li.checked {
-  color: #555;
+  color: #000;
   text-decoration: line-through;
 }
 
