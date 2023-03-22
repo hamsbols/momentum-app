@@ -168,3 +168,17 @@ function showTask() {
   listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
+const divContainer = document.querySelector("#elementToWorkOn");
+
+let isCLicked = true;
+
+let showOrHide = function () {
+  if (isCLicked) {
+    divContainer.style.display = "block";
+    isCLicked = false;
+  } else {
+    divContainer.style.display = "none";
+    isCLicked = true;
+  }
+};
