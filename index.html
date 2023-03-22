@@ -17,21 +17,35 @@
 
     <!--DASHBOARD-->
     <div class="main">
-      <span id="time">17:00:00</span>
+      <span id="time">05:00:00</span>
       <h1>
         <span id="greeting">Good morning, </span>
         <span id="name">Samuel</span>
       </h1>
       <h2>What is your main focus for today?</h2>
-      <h2 id="focus">Make Youtube Video</h2>
+      <h2 id="focus">Complete Project</h2>
     </div>
 
     <div class="quote">
-      <h5 id="content">Quote Content Here</h5>
-      <h6 id="author">Quote Author Here</h6>
+      <h5 id="content">Quote Content</h5>
+      <h6 id="author">Quote Author</h6>
     </div>
 
     <!--TO DO LIST-->
+    <div class="container">
+      <div class="todo-app">
+        <h2>To-Do List <img src="images/icon.png" /></h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Add note here" />
+          <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="list-container">
+          <!--<li class="checked">Task 1</li>
+          <li>Task 2</li>
+          <li>Task 3</li>-->
+        </ul>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
